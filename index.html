@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>音乐播放器</title> 
+  <link rel="stylesheet" type="text/css" href="css/musicPlay.css" /> 
+  <script type="text/javascript" src="JS/snow.min.js"></script> 
+  <script type="text/javascript" src="JS/play.js"></script> 
+  <script type="text/javascript" src="JS/jquery.min.js"></script> 
+  <script type="text/javascript" src="JS/jquery.rotate.min.js"></script> 
+  <!--<script type="text/javascript" src="JS/jquery-1.8.2.min.js"></script>--> 
+ </head> 
+ <body> 
+  <div id="all" data-keys="0"> 
+   <div id="top"> 
+    <div id="logo">
+     <a href="index.html"><span>Music Channel</span></a>
+    </div> 
+    <div id="nowPlay">
+     <div id="zhengzai">
+      <strong>正在播放:</strong>
+     </div> 
+     <div id="ge">
+      <strong>
+       <marquee>
+        起风了 (原曲： 高桥优 -《ヤキモチ》) - 买辣椒也用券
+       </marquee></strong>
+     </div> 
+    </div> 
+    <div id="denglu"> 
+     <div class="touxiang">
+      <img src="images/touxiang.png" alt="" height="100%" width="100%" />
+     </div> 
+     <div class="name">
+      长江七号
+     </div> 
+    </div> 
+   </div> 
+   <div id="zhongjian"> 
+    <div class="liebiao" id="liebiao" style="display: none"> 
+     <p class="list">播放列表</p> 
+     <table width="100%" border="0" style="margin-top: 50px;color:aliceblue; " cellspacing="0" cellpadding="0"> 
+      <tbody> 
+       <tr class="tr1 one"> 
+        <td class="td1">
+         <div class="nowPlay first bg"></div></td> 
+        <td class="td2">&nbsp;&nbsp;&nbsp;起风了- 买辣椒也用券</td> 
+       </tr> 
+       <tr class="tr1 two"> 
+        <td class="td1">
+         <div class="nowPlay second"></div></td> 
+        <td class="td2">&nbsp;&nbsp;&nbsp;不染--毛不易</td> 
+       </tr> 
+       <tr class="tr1 three"> 
+        <td class="td1">
+         <div class="nowPlay third"></div></td> 
+        <td class="td2">&nbsp;&nbsp;&nbsp;怀念青春--刘刚</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <div class="liebiao0" data-key="on">
+     <div class="right"></div> 
+    </div> 
+    <div id="zhuanpan"> 
+     <div class="yuan">
+      <!--<img src="images/qifengle.png" style="width: 100%;height: 100%;border-radius: 50%; " alt="起风了--买辣椒也用券" id="img0" >-->
+     </div> 
+    </div> 
+    <div id="lrc"> 
+     <div id="content"></div> 
+    </div> 
+   </div> 
+   <audio src="" controls="controls" id="audio" autoplay="autoplay" data-num="1"></audio> 
+   <div id="kongjian"> 
+    <!--播放暂停等按钮 --> 
+    <div class="up"></div> 
+    <div id="play" class="pause"></div> 
+    <div class="down"></div> 
+    <!--歌名--> 
+    <div class="musicName">
+     起风了- 买辣椒也用券
+    </div> 
+    <!--进度条--> 
+    <div id="progress"> 
+     <span id="bar"> </span> 
+     <div id="control"> 
+     </div> 
+    </div> 
+    <div id="time"> 
+     <p id="times"><span id="nowtime">00:00</span>/<span id="alltime">00:00</span></p> 
+    </div> 
+    <!--喇叭--> 
+    <div class="xiazai"></div> 
+    <div class="like" data-key="like"></div> 
+    <div class="comment"></div> 
+    <div id="sound" class="soundon"> 
+    </div> 
+    <!--声音控制--> 
+    <div id="volume"> 
+     <span id="volume-bar"> </span> 
+     <div id="volume-control"> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+  <script>var sf = new Snowflakes({
+    color: "#ffffff",
+    count: 75,
+    minOpacity: 0.2,
+    maxOpacity: 0.6
+});</script>  
+ </body>
+</html>
